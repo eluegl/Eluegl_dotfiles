@@ -1,0 +1,38 @@
+super + @space
+	rofi -show run
+
+super + f
+	firefox
+
+super + t
+	kitty
+
+super + c
+	bspc node -c
+
+super + r
+	bspc wm -r
+
+super + {shift + t,shift +f}
+	bspc node -t {tiled,fullscreen}
+
+super + {_,shift + }{q,s,z,d}
+	bspc node -{f,s} {west,south,north,east}
+
+super + {_,shift + }{1-9,0}
+	bspc {desktop -- focus,node -- to-desktop} 'focused:^{1-9,10}'
+
+super + ctrl + {q,s,z,d}
+	bspc node -z {left -80 0,bottom 0 80, top 0 -80, right 80 0}
+
+super + ctrl + shift + {q,s,z,d}
+	bspc node -z {right -80 0,top 0 80,bottom 0 -80,left 80 0}
+
+super + l
+	slock
+
+super + Print
+	scrot -s -F ~/img/screenshots/%Y-%m-%d-%H%M%S.png
+
+super + ctrl + f
+	flatpak run dev.goats.xivlauncher
