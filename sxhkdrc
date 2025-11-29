@@ -18,12 +18,67 @@ super + {shift + t,shift +f}
  
 super + {_,shift + }{q,s,z,d} 
         bspc node -{f,s} {west,south,north,east} 
- 
-super + {F1-F10} 
-        bspc desktop -f {1-9} 
- 
-super + shift + {F1-F10} 
-        bspc node -d {1-9} 
+
+super + F1
+    bspc desktop -f 1
+
+super + F2
+    bspc desktop -f 2
+
+super + F3
+    bspc desktop -f 3
+
+super + F4
+    bspc desktop -f 4
+
+super + F5
+    bspc desktop -f 5
+
+super + F6
+    bspc desktop -f 6
+
+super + F7
+    bspc desktop -f 7
+
+super + F8
+    bspc desktop -f 8
+
+super + F9
+    bspc desktop -f 9
+
+super + F10
+    bspc desktop -f 10
+
+
+super + shift + F1
+    bspc node -d 1
+
+super + shift + F2
+    bspc node -d 2
+
+super + shift + F3
+    bspc node -d 3
+
+super + shift + F4
+    bspc node -d 4
+
+super + shift + F5
+    bspc node -d 5
+
+super + shift + F6
+    bspc node -d 6
+
+super + shift + F7
+    bspc node -d 7
+
+super + shift + F8
+    bspc node -d 8
+
+super + shift + F9
+    bspc node -d 9
+
+super + shift + F10
+    bspc node -d 10
  
 super + ctrl + {q,s,z,d} 
         bspc node -z {left -80 0,bottom 0 80, top 0 -80, right 80 0} 
