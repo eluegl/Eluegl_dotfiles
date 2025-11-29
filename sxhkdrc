@@ -1,5 +1,5 @@
 super + @space
-        rofi -show run 
+        rofi -show drun 
  
 super + f 
         firefox 
