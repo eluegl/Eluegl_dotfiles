@@ -12,7 +12,10 @@ super + c
  
 super + r 
         bspc wm -r 
- 
+
+super + shift + @space
+        bspc node -t floating
+
 super + {shift + t,shift +f} 
         bspc node -t {tiled,fullscreen} 
  
