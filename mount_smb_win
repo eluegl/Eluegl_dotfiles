@@ -1,0 +1,1 @@
+mount.cifs //IPORHOSTNAME/FOLDERSNAME /home/USER/FOLDERSNAME -o user=ADMINACCOUNT,password=*****
