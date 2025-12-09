@@ -21,6 +21,8 @@ bspc config normal_border_color         "#282A36"
 bspc config active_border_color         "#373d20"
 bspc config presel_feedback_color       "#50FA7B"
 
+xset s off
+xset -dpms
 sxhkd &
 picom --config ~/.config/picom/picom.conf &
 dunst &
