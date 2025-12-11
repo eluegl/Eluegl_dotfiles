@@ -1,0 +1,7 @@
+##MOUNT DISK
+mount.cifs //IPORHOSTNAME/FOLDERSNAME /home/USER/FOLDERSNAME -o user=ADMINACCOUNT,password=*****
+
+##STOP DNS AUTO
+nmcli connection modify <nom-de-ta-connexion> ipv4.dns "1.1.1.1 9.9.9.9"
+nmcli connection modify <nom-de-ta-connexion> ipv4.ignore-auto-dns yes
+nmcli connection up <nom-de-ta-connexion>
