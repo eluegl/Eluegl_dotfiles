@@ -19,9 +19,6 @@ super + shift + @space
 super + {shift + t,shift +f} 
         bspc node -t {tiled,fullscreen} 
  
-super + {_,shift + }{q,s,z,d} 
-        bspc node -{f,s} {west,south,north,east} 
-
 super + F1
     bspc desktop -f 1
 
@@ -82,13 +79,7 @@ super + shift + F9
 
 super + shift + F10
     bspc node -d 10
- 
-super + ctrl + {q,s,z,d} 
-        bspc node -z {left -80 0,bottom 0 80, top 0 -80, right 80 0} 
- 
-super + ctrl + shift + {q,s,z,d} 
-        bspc node -z {right -80 0,top 0 80,bottom 0 -80,left 80 0} 
- 
+  
 super + l 
         slock 
  
@@ -105,13 +96,16 @@ super + Right
         bspc desktop -f next 
  
 XF86AudioRaiseVolume 
-    wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ 
+    wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
+    notify-send "Volume ↑" "$(wpctl get-volume @DEFAULT_AUDIO_SINK@)" 
  
 XF86AudioLowerVolume 
-    wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%- 
+    wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+    notify-send "Volume ↓" "$(wpctl get-volume @DEFAULT_AUDIO_SINK@)"
  
 XF86AudioMute 
-    wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle 
+    wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+    notify-send "Volume" "$(wpctl get-volume @DEFAULT_AUDIO_SINK@)"
  
 XF86AudioPlay 
     playerctl play-pause 
@@ -121,3 +115,6 @@ XF86AudioNext
  
 XF86AudioPrev 
     playerctl previous
+
+super + ctrl + alt + l
+    loginctl terminate-user $USER
